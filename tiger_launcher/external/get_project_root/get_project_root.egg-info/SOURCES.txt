@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+get_project_root/__init__.py
+get_project_root/get_project_root.py
+get_project_root.egg-info/PKG-INFO
+get_project_root.egg-info/SOURCES.txt
+get_project_root.egg-info/dependency_links.txt
+get_project_root.egg-info/top_level.txt

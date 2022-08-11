@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: get_project_root
+Version: 0.2
+Summary: a simple package for resolving project root in most situations
+Home-page: https://github.com/bigbizze/py_get_project_root
+Author: Charles Anderson
+Author-email: hpcngmoh@gmail.com
+License: MIT
+Download-URL: https://github.com/bigbizze/py_get_project_root/archive/refs/tags/init4.tar.gz
+Keywords: UTILS,PROJEC ROOT,DIRECTORY
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# py_get_project_root
+
+A simple package for resolving project root in most situations.
+I found myself rewriting something to resolve this in various 
+different project structures & situations, annoyingly, so I wroto
+this to save myself time.
+
+Let me know if you run into any situations where it doesn't resolve
+the project root path correctly.
+
+____
+
+```
+pip install get-project-root
+```
+
+____
+
+```py
+from get_project_root import root_path
+
+project_root = root_path(ignore_cwd=False)
+# >> "C:/Users/person/source/some_project/"
+
+```
+
+____
+
+### ignore_cwd: 
+  Ignores the current working directory for deriving the root path.
+  In the case where the directory of the file this is called from is 
+   the same as the current working directory CWD, it will return
+   the current working directory if this is set to True.
+
+
