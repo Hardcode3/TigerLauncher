@@ -48,11 +48,14 @@ def run(pylog: _io.TextIOWrapper) -> None:
 
     # for comparison purposes, put the experimental data into the folder well data (optional)
 
-    # CHOOSE THE INPUT FILE YOU WANT TO WORK ON
-    inputFile = '/home/baptiste/Documents/git/TIGERLauncher/input/Pullach_TH_220506_TH3cal_long_pump_time.i'
+    # CHOOSE THE INPUT FILE YOU WANT TO WORK ON (only if you need to duplicate an input file)
+
+    inputFile = ''
 
     # THE INPUT FILE WILL BE DUPLICATED AND THE VALUES REPLACED FOR EVERY PARAMETER'S COMBINATION
-    AutoDuplicateTigerInputFile(inputFile, pylog, verbose=True)
+
+    # AutoDuplicateTigerInputFile(inputFile, pylog, verbose=True)
+    
     # SOME .i FILES SHOULD HAVE APPEARED IN THE input
     # information about the specified parameters should appear in their name, such as:
     #       blablablaTH3cal@permea@thickness@compressibility@poro.i
@@ -66,7 +69,7 @@ def run(pylog: _io.TextIOWrapper) -> None:
     # select verbose to see details about the current state of the simulation
     # select runSimu to run the TIGER simulations through terminal, otherwise the files will only be duplicated
     #   based on the file settings.py
-    AutoTigerLaunch(TIGER_PATH, pylog, verbose=True)
+    AutoTigerLaunch(pylog, verbose=True)
 
 
 if __name__ == '__main__':
