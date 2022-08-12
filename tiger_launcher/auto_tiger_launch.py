@@ -117,10 +117,10 @@ class AutoTigerLaunch:
         fileName: str = f"{self.logs_dir_}/log_{get_time()}.txt"
 
         with open(fileName, "w") as text_file_output:
+            start_time = time.time()
             count: int = 0
             input_file_list, _, _ = self.find_input_files(self.input_directory_)
             for file_path in input_file_list:
-                start_time = time.time()
                 count += 1
                 self.view_.running_tiger_infos(count, self.input_file_number_, time.time() - start_time, file_path)
                 launch_tiger_command = \
